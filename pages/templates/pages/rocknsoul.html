@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Memphis Rock 'n' Soul Museum</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+
+		<button id="increaseFontSize">Increase Font Size</button>
+		<button id="decreaseFontSize">Decrease Font Size</button>
+		<button id="resetFontSize">Reset Font Size</button>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+			  document.getElementById('increaseFontSize').addEventListener('click', function () {
+				changeFontSize(2);
+			  });
+		  
+			  document.getElementById('decreaseFontSize').addEventListener('click', function () {
+				changeFontSize(-2);
+			  });
+
+			  document.getElementById('resetFontSize').addEventListener('click', function () {
+				resetFontSize();
+			  });
+		
+			  function changeFontSize(change) {
+				var currentSize = parseInt(getComputedStyle(document.body).fontSize, 10);
+				var newSize = currentSize + change;
+				document.body.style.fontSize = newSize + 'px';
+				localStorage.setItem('fontSizePreference', newSize);
+			  }
+
+			  function resetFontSize() {
+					document.body.style.fontSize = '18px';
+					localStorage.setItem('fontSizePreference', '18'); // Reset stored preference
+					localStorage.setItem('fontSizeReset', 'true'); // Set the reset flag to true
+				}
+		  
+			  var storedFontSize = localStorage.getItem('fontSizePreference');
+			  if (storedFontSize) {
+				document.body.style.fontSize = storedFontSize + 'px';
+			  }
+			});
+			
+		  </script>
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">uMuse Museums</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="exhibits.html">Exhibits</a></li>
+							<li>
+								<a href="#">Museums</a>
+								<ul>
+									<li><a href="botanical.html">Botanical Gardens</a></li>
+									<li><a href="brooks.html">Brooks Museum of Art</a></li>
+									<li><a href="crosstown.html">Crosstown Arts</a></li>
+									<li><a href="cmom.html">Children's Museum</a></li>
+									<li><a href="metal.html">Metal Museum</a></li>
+									<li><a href="mosh.html">Museum of Science and History</a></li>
+									<li><a href="ncrm.html">National Civil Rights Museum</a></li>
+									<li><a href="rocknsoul.html">RocknSoul Museum</a></li>
+									<li><a href="stax.html">Stax Museum</a></li>
+									<li><a href="sun.html">Sun Studio</a></li>
+								</ul>
+							</li>
+							<li><a href="about.html">About</a></li>
+						</ul>
+					</nav>
+				</div>
+
+			<!-- Main -->
+			<div class="wrapper style1">
+				<div class="container">
+					<div class="row gtr-200">
+						<div class="col-4 col-12-mobile" id="sidebar">
+							<section>
+								<header>
+									<h3><a href="#">Upcoming Exhibits</a></h3>
+								</header>
+								<div class="row gtr-50">
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic10.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 1</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic11.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 2</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic12.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 3</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic13.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 4</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic14.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 5</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic15.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 6</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic10.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 7</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+								</div>
+								<footer>
+									<a href="#" class="button">See Other Exhibits</a>
+								</footer>
+							</section>
+						</div>
+						<div class="col-8 col-12-mobile imp-mobile" id="content">
+							<article id="main">
+								<header>
+									<h2><a href="#">Rock 'n' Soul Museum</a></h2>
+								</header>
+								<a href="#" class="image featured"><img src="{% static 'images/RocknSoulIMG' %}" alt="" /></a>
+								<header>
+									<h3>About the Rock 'n' Soul Museum</h3>
+								</header>
+									<p>
+										The Memphis Rock ‘n’ Soul Museum’s exhibition about the birth of rock and soul music is based on one created by the Smithsonian Institution in 2000. It tells the story of musical pioneers who, for the love of music, overcame racial and socio-economic barriers to create the music that shook the entire world.
+									</p>
+									<p>
+										Located at 191 Beale, on the corner of legendary Highway 61 and inside of the FedExForum sports and entertainment complex, the museum offers a comprehensive Memphis music experience. It will take you from the rural field hollers and sharecroppers of the 1930s, through the explosion of Sun, Stax, and Hi Records, inside Memphis’ musical heyday in the 70s, to its global musical influence. The museum’s digital audio tour guide is packed with over 300 minutes of information, including over 100 songs. It takes visitors at their own pace through seven galleries featuring 3 audio visual programs, more than 30 instruments, 40 costumes, and other musical treasures.
+									</p>
+									<p>
+										Located at 191 Beale, on the corner of legendary Highway 61 and inside of the FedExForum sports and entertainment complex, the museum offers a comprehensive Memphis music experience. It will take you from the rural field hollers and sharecroppers of the 1930s, through the explosion of Sun, Stax, and Hi Records, inside Memphis’ musical heyday in the 70s, to its global musical influence. The museum’s digital audio tour guide is packed with over 300 minutes of information, including over 100 songs. It takes visitors at their own pace through seven galleries featuring 3 audio visual programs, more than 30 instruments, 40 costumes, and other musical treasures.
+									</p>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<!-- Contact -->
+								<section class="contact">
+									<header>
+										<h3>uMuse</h3>
+									</header>
+									<p>Museums made easy, for you!</p>
+								</section>
+
+							<!-- Copyright -->
+								<div class="copyright">
+									<ul class="menu">
+										<li>&copy; uMuse</li>
+									</ul>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.dropotron.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

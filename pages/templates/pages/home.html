@@ -1,6 +1,260 @@
-<!-- pages/templates/pages/home.html -->
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	assets/css/noscript.css
+-->
+<html>
+	<head>
+		<title>uMuse Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />  <!-- changed -->
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript> <!-- changed -->
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
 
-{% extends "pages/base.html" %} {% block title%} Home Page {%endblock %}
-{% block content %}
-<p>Museums Made Easy for You!</p>
-{% endblock %}
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header> 
+								<h1><a href="{% static 'pages/home.html' %}" id="logo">uMuse</a></h1> <!-- changed from index.html-->
+								<hr />
+								<p>Museums made easy for you</p>
+							</header>
+							<footer>
+								<a href="#banner" class="button circled scrolly">Start</a>
+							</footer>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="home.html">Home</a></li> <!-- changed from index.html-->
+							<li><a href="exhibits.html">Exhibits</a></li> <!-- changed from exhibits.html-->
+							<li>
+								<a href="#">Museums</a>
+								<ul>
+									<li><a href="stax.html">Stax Museum</a></li>
+									<li><a href="sun.html">Sun Studio</a></li>
+									<li><a href="brooks.html">Brooks Museum of Art</a></li>
+									<li><a href="cmom.html">Children's Museum of Memphis</a></li>
+									<li><a href="ncrm.html">National Civil Rights Museum</a></li>
+									<li><a href="metal.html">Metal Museum</a></li>
+								</ul>	
+							</li>
+							<li><a href="about.html">About</a></li>
+						</ul>
+					</nav>
+				</div>
+
+			<!-- Banner -->
+				<section id="banner">
+					<header>
+						<h2>Welcome to <strong>uMuse</strong>.</h2>
+						<p>
+							A tool to find local Memphis museum exhibits, developed by students at Rhodes College.
+						</p>
+					</header>
+				</section>
+
+			<!-- Carousel -->
+				<section class="carousel">
+					<div class="reel">
+
+						<article>
+							<a href="#" class="image featured"><img src="{% static 'images/pic01.jpg' %}" alt="" /></a>
+							<header>
+								<h3><a href="#">Exhibit 1</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="{% static 'images/pic02.jpg' %}" alt="" /></a>
+							<header>
+								<h3><a href="#">Exhibit 2</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article> 
+							<a href="#" class="image featured"><img src="{% static 'images/pic03.jpg' %}" alt="" /></a>
+							<header>
+								<h3><a href="#">Exhibit 3</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="{% static 'images/pic04.jpg' %}" alt="" /></a>
+							<header>
+								<h3><a href="#">Exhibit 4</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="{% static 'images/pic05.jpg' %}" alt="" /></a>
+							<header>
+								<h3><a href="#">Exhibit 5</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="{% static 'images/pic01.jpg' %}" alt="" /></a>
+							<header>
+								<h3><a href="#">Exhibit 6</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="{% static 'images/pic02.jpg' %}" alt="" /></a>
+							<header>
+								<h3><a href="#">Exhibit 7</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="{% static 'images/pic03.jpg' %}" alt="" /></a>
+							<header>
+								<h3><a href="#">Exhibit 8</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="{% static 'images/pic04.jpg' %}" alt="" /></a>
+							<header>
+								<h3><a href="#">Exhibit 9</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="{% static 'images/pic05.jpg' %}" alt="" /></a>
+							<header>
+								<h3><a href="#">Exhibit 10</a></h3>
+							</header>
+							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+						</article>
+
+					</div>
+				</section>
+
+			<!-- Main -->
+				<div class="wrapper style2">
+
+					<article id="main" class="container special"> 
+						<a href="#" class="image featured"><img src="{% static 'images/pic06.jpg' %}" alt="" /></a>
+						<header>
+							<h2><a href="#">What is uMuse?</a></h2>
+							<p>
+								Developed by Kiera Lesky, Abbie Seale, Jadyn Scott and Jackson Hendrix, uMuse makes finding local museum exhibits
+								much more efficient.
+							</p>
+						</header>
+						<p>
+							Keeping track of traveling museum exhibits can be difficult to do, especially if you live somewhere with several 
+							local museums. There could be several different websites, magazines, newsletters, and advertisements for various 
+							exhibits visiting a nearby museum, but they can be impossible to keep track of, and it’s easy to miss interesting 
+							showcases. uMuse solves this problem by scanning the internet for all things museum exhibits. By taking advantage 
+							of available packages and plugins, uMuse can search through several different websites, collect exhibition
+							 information, and condense it all into one place. 
+						</p>
+						<footer>
+							<a href="#" class="button">Continue Reading</a>
+						</footer>
+					</article>
+
+				</div>
+
+			<!-- Features -->
+				<div class="wrapper style1">
+
+					<section id="features" class="container special">
+						<header>
+							<h2>Some of the Museums we feature</h2>
+							<p>We work with local museums to consolidate their upcoming exhibit information, allowing for easy user consumption.</p>
+						</header>
+						<div class="row">
+							<article class="col-4 col-12-mobile special">
+								<a href="sun.html" class="image featured"><img src="{% static 'images/SunIMG.jpg' %}" alt="" /></a>
+								<header>
+									<h3><a href="#">Sun Studio</a></h3>
+								</header>
+								<p>
+									Sun Studio is known worldwide as “The Birthplace of Rock’n’roll”. It is the discovery location of musical legends and genres of the 50’s from B.B. King and Elvis Presley to Johnny Cash and Jerry Lee Lewis; from Blues and Gospel to Country and Rock’n'roll.
+								</p>
+							</article>
+							<article class="col-4 col-12-mobile special">
+								<a href="cmom.html" class="image featured"><img src="{% static 'images/CMOM_IMG.jpg' %}" alt="" /></a>
+								<header>
+									<h3><a href="#">Children's Museum of Memphis</a></h3>
+								</header>
+								<p>
+									The Children’s Museum of Memphis is an arts and education organization that inspires children to explore, imagine, and create – growing minds and filling them with endless possibilities.
+								</p>
+							</article>
+							<article class="col-4 col-12-mobile special">
+								<a href="ncrm.html" class="image featured"><img src="{% static 'images/NcrmIMG.jpg' %}" alt="" /></a>
+								<header>
+									<h3><a href="#">National Civil Rights Museum</a></h3>
+								</header>
+								<p>
+									Noted as one of the nation's premier heritage and cultural museums, the National Civil Rights Museum in Memphis, Tennessee, is steadfast in its mission to share the culture and lessons from the American Civil Rights Movement and explore how this significant era continues to shape equality and freedom globally.
+								</p>
+							</article>
+						</div>
+					</section>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<!-- Contact -->
+									<section class="contact">
+										<header>
+											<h3>uMuse</h3>
+										</header>
+										<p>Museums made easy, for you!</p>
+									</section>
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li>&copy; uMuse</li>
+										</ul>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.dropotron.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

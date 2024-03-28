@@ -1,0 +1,237 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Crosstown Arts</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+
+		<button id="increaseFontSize">Increase Font Size</button>
+		<button id="decreaseFontSize">Decrease Font Size</button>
+		<button id="resetFontSize">Reset Font Size</button>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+			  document.getElementById('increaseFontSize').addEventListener('click', function () {
+				changeFontSize(2);
+			  });
+		  
+			  document.getElementById('decreaseFontSize').addEventListener('click', function () {
+				changeFontSize(-2);
+			  });
+
+			  document.getElementById('resetFontSize').addEventListener('click', function () {
+				resetFontSize();
+			  });
+		
+			  function changeFontSize(change) {
+				var currentSize = parseInt(getComputedStyle(document.body).fontSize, 10);
+				var newSize = currentSize + change;
+				document.body.style.fontSize = newSize + 'px';
+				localStorage.setItem('fontSizePreference', newSize);
+			  }
+
+			  function resetFontSize() {
+					document.body.style.fontSize = '18px';
+					localStorage.setItem('fontSizePreference', '18'); // Reset stored preference
+					localStorage.setItem('fontSizeReset', 'true'); // Set the reset flag to true
+				}
+		  
+			  var storedFontSize = localStorage.getItem('fontSizePreference');
+			  if (storedFontSize) {
+				document.body.style.fontSize = storedFontSize + 'px';
+			  }
+			});
+			
+		  </script>
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">uMuse Museums</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="exhibits.html">Exhibits</a></li>
+							<li>
+								<a href="#">Museums</a>
+								<ul>
+									<li><a href="botanical.html">Botanical Gardens</a></li>
+									<li><a href="brooks.html">Brooks Museum of Art</a></li>
+									<li><a href="crosstown.html">Crosstown Arts</a></li>
+									<li><a href="cmom.html">Children's Museum</a></li>
+									<li><a href="metal.html">Metal Museum</a></li>
+									<li><a href="mosh.html">Museum of Science and History</a></li>
+									<li><a href="ncrm.html">National Civil Rights Museum</a></li>
+									<li><a href="rocknsoul.html">RocknSoul Museum</a></li>
+									<li><a href="stax.html">Stax Museum</a></li>
+									<li><a href="sun.html">Sun Studio</a></li>
+								</ul>		
+							</li>
+							<li><a href="about.html">About</a></li>
+						</ul>
+					</nav>
+				</div>
+
+			<!-- Main -->
+			<div class="wrapper style1">
+				<div class="container">
+					<div class="row gtr-200">
+						<div class="col-4 col-12-mobile" id="sidebar">
+							<section>
+								<header>
+									<h3><a href="#">Upcoming Exhibits</a></h3>
+								</header>
+								<div class="row gtr-50">
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic10.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 1</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic11.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 2</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic12.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 3</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic13.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 4</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic14.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 5</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic15.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 6</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+									<div class="col-4">
+										<a href="#" class="image fit"><img src="{% static 'images/pic10.jpg' %}" alt="" /></a>
+									</div>
+									<div class="col-8">
+										<h4>Exhibit 7</h4>
+										<p>
+											Amet nullam fringilla nibh nulla convallis tique ante proin.
+										</p>
+									</div>
+								</div>
+								<footer>
+									<a href="#" class="button">See Other Exhibits</a>
+								</footer>
+							</section>
+						</div>
+						<div class="col-8 col-12-mobile imp-mobile" id="content">
+							<article id="main">
+								<header>
+									<h2><a href="#">Crosstown Arts</a></h2>
+								</header>
+								<a href="#" class="image featured"><img src="{% static 'images/crosstownIMG.jpg' %}" alt="" /></a>
+								<header>
+									<h3>About Crosstown Arts</h3>
+								</header>
+									<p>
+										Crosstown Arts was formed in 2010 with two goals: to create a vision for the redevelopment of the historic Sears Crosstown building and to help cultivate Memphis’s creative community.
+									</p>
+									<p>
+										When co-founders Christopher Miner and Todd Richardson stood in front of the Sears, Roebuck & Co. distribution center in Midtown Memphis, they saw great potential for a multidisciplinary contemporary arts center in the 1.5 million square feet of space.
+									</p>
+									<p>
+										In 2010, Chris and Todd began working with consultants to complete a feasibility study for the building’s renovation. Meanwhile, Crosstown Arts began hosting a series of events —visual art exhibitions, DIY music shows, free public lectures, artist talks, dinners, collaborative art projects, concerts, and block parties — that pointed to the vibe and vision that a contemporary arts center could generate in the future building. A plan for the contemporary arts center began to emerge that would include a large gallery and exhibition space, a multidisciplinary artist residency program, and shared art-making facilities, amid other programs and events. The values of inclusivity, connectivity, and support for creative exchange among everyone in the creative community, regardless of prior experience, were central to the concept.
+									</p>
+									<p>	
+										By the end of the year, the feasibility study concluded that the renovation project of the former Sears building would be possible — but only with a complex mix of funding sources, including city, county, state, federal, philanthropic, and private financing. Most importantly, a large majority of the space would have to be pre-leased in order to secure financing for the project.
+									</p>
+									<p>
+										Thanks to the overwhelming support of the surrounding community, in part because of so many personal connections with Sears’ 80-year history in the neighborhood, the project continued to build momentum. As more and more Memphians took a personal interest in the potential reuse of the former Sears building, other organizations saw the allure of the vision. By the end of 2012, eight local organizations had committed to lease over 400,000 square feet of space in the building.
+									</p>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<!-- Contact -->
+								<section class="contact">
+									<header>
+										<h3>uMuse</h3>
+									</header>
+									<p>Museums made easy, for you!</p>
+								</section>
+
+							<!-- Copyright -->
+								<div class="copyright">
+									<ul class="menu">
+										<li>&copy; uMuse</li>
+									</ul>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.dropotron.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>
